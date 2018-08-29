@@ -6,6 +6,7 @@ class Anagram
   end
 
   def match(find_anagram)
+    puts "#{self.word} must have the same letters as #{find_anagram}"
     find_anagram.find_all do |words|
       if words.split("").sort == self.word.split
         ("").sort
@@ -14,3 +15,4 @@ class Anagram
       end
   end
 end
+
