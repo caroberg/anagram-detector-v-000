@@ -6,12 +6,11 @@ class Anagram
   end
 
   def match(find_anagram_in_this_string)
-    puts "#{self.word_to_analyze} #{find_anagram_in_this_string}"
+    puts "#{self.word_to_analyze} %w(#{find_anagram_in_this_string})"
     find_anagram_in_this_string.find_all do |word|
       if word.split("").sort == self.word_to_analyze.split("").sort
         word
       end
     end
   end
-
 end
